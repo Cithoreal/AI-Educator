@@ -1,3 +1,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/open-webui/open-webui.git
+[submodule "pipelines"]
+	path = pipelines
+	url = https://github.com/open-webui/pipelines.git
