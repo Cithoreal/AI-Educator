@@ -2,7 +2,9 @@
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
+from dotenv import load_dotenv
 
+load_dotenv()
 llm = ChatOpenAI(temperature=0.7)
 
 template = PromptTemplate(

@@ -1,6 +1,6 @@
 #ChatGPT generated file as part of project setup
 from langchain.vectorstores import Chroma
-from langchain.embeddings import OpenAIEmbeddings
+from langchain_community.embeddings import OpenAIEmbeddings
 from langchain.schema import Document
 
 import os

@@ -4,8 +4,10 @@ from app.db.progress_db import init_db, log_progress
 from app.agents.tutor_agent import generate_lesson
 from app.memory.chroma_manager import save_lesson_to_memory
 from datetime import datetime
+from dotenv import load_dotenv
 
 app = FastAPI()
+load_dotenv()
 
 @app.on_event("startup")
 def setup():
