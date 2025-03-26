@@ -22,3 +22,7 @@ I thought using open web ui would streamline the development of this application
 running pipelines docker container
 
 Even though I spent a lot of time learning langchain, I'm starting to think I should use all of Open-WebUI's built in features to build this project before the deadline. I was hoping to keep the application relatively decoupled from the front end so I could reasonably reuse my progress and eventually build a dedicated and specialized front end for it, but Open-WebUI has all the tools I want to use integrated and it makes more sense to rely on them in the time I have left.
+
+Going to use the built in integrated RAG feature in Open-WebUI. I can upload documents of chats or course material and it will be refrenced across all chats, but I will be setting up Open-WebUI specifically for this application so I don't mind being very specific on how I set things up.
+
+on second thought, the integrated RAG is useful for uploading documents, but I want to be able to automatically store information from conversations in vector databases as well. 
