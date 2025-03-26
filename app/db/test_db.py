@@ -2,7 +2,7 @@
 import sqlite3
 import os
 
-DB_PATH = "data/chat.db"
+DB_PATH = "data/edu_progress.db"
 
 def init_db():
     

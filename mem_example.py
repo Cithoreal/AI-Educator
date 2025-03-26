@@ -1,6 +1,7 @@
 from typing import List, Union, Generator, Iterator
-#from schemas import OpenAIChatMessage
+from schemas import OpenAIChatMessage
 from pydantic import BaseModel
+from test_db import test_db
 
 
 class Pipeline:
@@ -21,6 +22,7 @@ class Pipeline:
     async def on_startup(self):
         # This function is called when the server is started.
         print(f"on_startup:{__name__}")
+        test_db.init_db()
         pass
 
     async def on_shutdown(self):
@@ -59,9 +61,11 @@ class Pipeline:
         # If you'd like to check for title generation, you can add the following check
         if body.get("title", False):
             print("Title Generation Request")
-
-        print(messages)
-        print(user_message)
-        print(body)
+        
+        test_db.log_progress(user_message)
+        #with open("../data/output.txt", "w") as file:
+         #   file.write(f"Messages: {messages}\n")
+          #  file.write(f"User Message: {user_message}\n")
+            #file.write(f"Body: {body}\n")
 
         return f"{__name__} response to: {user_message}"
